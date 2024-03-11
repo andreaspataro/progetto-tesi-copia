@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400;1,9..40,600;1,9..40,700&family=Paytone+One&display=swap"
+        rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Acme&family=Archivo+Black&family=Asap&family=Belanosima&family=Besley&family=Bitter&family=Bowlby+One&family=Caveat&family=Chelsea+Market&family=Cookie&family=Cormorant+Garamond&family=DM+Sans:opsz@9..40&family=DM+Serif+Display&family=Dosis&family=EB+Garamond&family=Fugaz+One&family=Gloria+Hallelujah&family=Hind&family=IBM+Plex+Mono&family=Inter&family=Josefin+Sans&family=Jost&family=Lato&family=Libre+Baskerville&family=Montserrat&family=Noto+Sans&family=Nunito&family=Open+Sans&family=Pacifico&family=Playfair+Display&family=Poppins&family=Quicksand&family=Red+Hat+Display&family=Roboto&family=Roboto+Flex:opsz@8..144&family=Roboto+Mono&family=Rokkitt&family=Sacramento&family=Signika+Negative&family=Single+Day&family=Slabo+27px&family=Staatliches&family=Tilt+Warp&family=Ubuntu&family=Yellowtail&display=swap" rel="stylesheet"> -->
+    <!-- inclusione swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="settings.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="mobile.js" defer></script>
+    <script src="page_home.js" defer></script>
+    <script src="page_help.js" defer></script>
+    <script src="common.js" defer></script>
+    <script src="page_custom_picks.js" defer></script>
+    <script src="page_cards_main.js" defer></script>
+    <script src="index.js" defer></script>
+    
+    <title>Cards, an inspiration help</title>
+</head>
+
+<body id="body" class="text-font text-options">
+    <div id="container-bg" class="container-bg">
+        <header class="pt-m box-size">
+            <div class="header-menu-mobile-wrapper">
+                <div class="header-menu-mobile" id="header-menu-mobile">
+                    <div class="hamburger-overlay"></div>
+                    <div class="hamburger1"></div>
+                    <div class="hamburger2"></div>
+                </div>
+            </div>
+
+            <a class="header-logo">
+                <h1 class="logo-title title-font logo-size">Cards</h1>
+                <h2 class="logo-subtitle text-font text-options logo-sub-size">an inspiration help</h2>
+            </a>
+
+            <div class="header-menu-spacer"></div>
+
+
+            <div class="header-menu">
+                <div class="menu-list">
+                    <a class="menu-list-element text-font text-options" id="menu-home">Home</a>
+                    <a class="menu-list-element text-font text-options" id="menu-random">Random</a>
+                    <a class="menu-list-element text-font text-options" id="menu-picks">Custom Picks</a>
+                    <a class="menu-list-element text-font text-options" id="menu-help">Help</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="menu-mobile-page">
+            <div class="menu-list">
+                <a class="menu-list-element text-font text-options" id="mobile-menu-home">Home</a>
+                <a class="menu-list-element text-font text-options" id="mobile-menu-random">Random</a>
+                <a class="menu-list-element text-font text-options" id="mobile-menu-picks">Custom Picks</a>
+                <a class="menu-list-element text-font text-options" id="mobile-menu-help">Help</a>
+            </div>
+        </div>
+
+
+        <!-- pagine -->
+        <div class="pages-wrapper">
+
+            <div class="home home-abs box-size">
+                <div class="home-centered">
+                    <div class="centered-text text-font text-options">What do you want to create today?</div>
+                    <h1 class="centered-funct title-font pt-xxs">
+                        <div class="centered-funct-overlay"></div>
+                        <div class="centered-funct-left">Try</div>
+                        <div class="centered-funct-right">
+                            <div class="centered-funct-right-letter">C</div>
+                            <div class="centered-funct-right-letter">a</div>
+                            <div class="centered-funct-right-letter">r</div>
+                            <div class="centered-funct-right-letter">d</div>
+                            <div class="centered-funct-right-letter">s</div>
+                        </div>
+                    </h1>
+                </div>
+            </div>
+
+
+            <div class="help pages hidden-pages box-size">
+                <div class="centered-text text-font text-options">
+                    Cards is a tool designed to provide help when creating a project. <br />
+                    Its main purpose is to assist Web Designers, Graphic Designers and creators of all kinds. <br />
+                    The main functionality consists of placing the creator in the position of having to make choices within a limited set of possibilities. <br />
+                    The choices made will help the creator understand the direction of the project, and will provide them with a starting point on which to develop the project. <br />
+                    <br />
+                    Functionalities:
+                    <ul>
+                        <li>
+                            <i>Main</i>: select a card for each category.
+                        </li>
+                        <li>
+                            <i>Random</i>: choices are made with hole cards.
+                        </li>
+                        <li>
+                            <i>Custom Picks</i>: selected cards will be shown on this page. If no cards are selected, you will be able to choose from the entire deck without limitation.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cards_main pages hidden-pages box-size">
+                <div class="lvls-title"></div>
+                <div class="cards_main_wrapper">
+                    <div class="cards_main_title"></div>
+                    <div class="cards-container">
+                        <div class="card-wrapper">
+                            <div class="card">
+                                <div class="card-rect"></div>
+                                <div class="card-text"></div>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card">
+                                <div class="card-rect"></div>
+                                <div class="card-text"></div>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card">
+                                <div class="card-rect"></div>
+                                <div class="card-text"></div>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card">
+                                <div class="card-rect"></div>
+                                <div class="card-text"></div>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card">
+                                <div class="card-rect"></div>
+                                <div class="card-text"></div>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card">
+                                <div class="card-rect"></div>
+                                <div class="card-text"></div>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card">
+                                <div class="card-rect"></div>
+                                <div class="card-text"></div>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card">
+                                <div class="card-rect"></div>
+                                <div class="card-text"></div>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card">
+                                <div class="card-rect"></div>
+                                <div class="card-text"></div>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card">
+                                <div class="card-rect"></div>
+                                <div class="card-text"></div>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card">
+                                <div class="card-rect"></div>
+                                <div class="card-text"></div>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card">
+                                <div class="card-rect"></div>
+                                <div class="card-text"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="custom_picks pages hidden-pages box-size">
+                <div class="custom_picks_title"></div>
+                <div class="picks-container">
+                </div>
+
+                <div class="picks-menu-container hidden-pages">
+                    <div class="select-wrapper">
+                        <span class="select-text"></span>
+                        <img src="img/icone/chevron-down-solid.svg" alt="arrow-down">
+                        <select id="picks-menu-select" class="text-font text-options"></select>
+                    </div>
+                    <div class="picks-menu-cards-wrapper"></div>
+                    <div class="picks-menu-close">
+                        <div class="cross-close-wrapper">
+                            <div class="cross-close cross1"></div>
+                            <div class="cross-close cross2"></div>
+                        </div>
+                    </div>
+                    <!-- <img class="picks-menu-close" src="img/icone/xmark-solid.svg"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

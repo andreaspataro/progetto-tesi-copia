@@ -1,0 +1,152 @@
+:root{
+    --bodyfont: 'DM Sans', sans-serif;
+    --titlefont: 'Paytone One', sans-serif;
+}
+
+.title-font{
+    font-family: var(--titlefont);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.text-font{
+    font-family: var(--bodyfont);
+}
+
+.text-options{
+    font-variation-settings: 'opsz' 34;
+    font-weight: 500;
+}
+
+.box-size{
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+}
+
+.pt-xxs{
+    padding-top: 0.2em;
+}
+
+.pt-xs{
+    padding-top:0.5em;
+}
+
+.pt-s{
+    padding-top: 1em;
+}
+
+.pt-m{
+    padding-top: 2em;
+}
+
+.logo-size{
+    font-size: 2.9rem;
+    line-height: 2.9rem;
+}
+
+.logo-sub-size{
+    font-size: 1.05rem;
+    line-height: 1.05rem;
+    padding-top: 0.1em;
+}
+
+.pages-wrapper{
+    /* position: relative; */
+    flex: 1 1 0;
+}
+
+.hidden-pages{
+    display: none;
+    opacity: 0;
+}
+
+.card-rect_img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.card.not-clickable{
+    cursor: default;
+}
+
+.card-rect.font-display{
+    font-size: 5.625rem;
+    line-height: 5.625rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card.image-display .card-rect{
+    aspect-ratio: 0.64;
+}
+
+.card.image-display .card-text{
+    padding-top: unset;
+    padding-bottom: unset;
+}
+
+.card.image-display{
+    padding: 0.625rem 0.625rem;
+}
+
+.card.word-display .card-rect{
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 0.64;
+}
+
+.card.word-display .card-text{
+    padding-top: unset;
+    padding-bottom: unset;
+}
+
+.card.word-display{
+    padding: 0.625rem 0.625rem;
+}
+
+#picks-menu-select{
+    text-transform: capitalize;
+    width: fit-content;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.select-wrapper{
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+    margin-top: 0.625rem;
+    margin-left: 3.125rem;
+}
+
+.select-wrapper .select-text{
+    font-size: 1.5rem;
+}
+
+.select-wrapper img{
+    width: 1rem;
+    margin-left: 0.3rem;
+}
+
+.point{
+    pointer-events: none;
+}
+
