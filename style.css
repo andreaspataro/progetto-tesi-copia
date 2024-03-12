@@ -820,6 +820,11 @@ header {
         width: 16ch;
     }
 
+    .box-size{
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
     
 }
 
@@ -847,7 +852,7 @@ header {
     }
 }
 
-@media screen and (max-height: 750px){
+@media screen and (max-height: 780px){
     .cards_main .cards-container{
         /* margin-top: 4.25rem; */
         position: unset;
@@ -863,8 +868,8 @@ header {
 
     .cards_main_title {
         /* font-size: 1.3rem; */
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 
     .custom_picks .picks-menu-container{
@@ -891,14 +896,14 @@ header {
 
     .custom_picks_title{
         /* font-size: 1.3rem; */
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 
     .custom_picks_title{
         /* font-size: 1.3rem; */
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
     
 }
