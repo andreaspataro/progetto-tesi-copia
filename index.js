@@ -1,18 +1,172 @@
 window.addEventListener('load', function () {
-/*     const hash = window.location.hash?.substring (1)
-    if (!hash){
-        window.location.hash = "home"
-    }else{
-        change_page(window.location.hash.substring(1));
-    }
- */    
-    if (window.location.hash?.substring (1) == 'home'){
-        change_page("home");    
+    /*     const hash = window.location.hash?.substring (1)
+        if (!hash){
+            window.location.hash = "home"
+        }else{
+            change_page(window.location.hash.substring(1));
+        }
+     */
+    if (window.location.hash?.substring(1) == 'home') {
+        change_page("home");
     } else {
         window.location.hash = 'home';
     }
     //change_page(window.location.hash?.substring (1) ?? "home");
     init_background(bg_colors);
+
+    if (ismobile()) {
+        create_slider(dom_picks_container, "swiperPicks");
+        create_slider(dom_picks_cards_wrapper, "swiperPicksMenu");
+
+        let swiperWrapper = document.createElement("div");
+        swiperWrapper.classList.add("swiper-wrapper");
+
+        let slider = document.createElement("div");
+        slider.classList.add("swiperCards", "swiper");
+
+        let domElem = document.querySelectorAll(".cards-container > .card-wrapper");
+
+        for (let i = 0; i < domElem.length; i++) {
+            let slide = document.createElement("div");
+            slide.classList.add("swiper-slide");
+            slide.appendChild(domElem[i]);
+            swiperWrapper.appendChild(slide);
+        }
+
+        slider.appendChild(swiperWrapper);
+
+        let pagination = document.createElement("div");
+        pagination.classList.add("swiper-pagination");
+
+        let prev = document.createElement("div");
+        prev.classList.add("swiper-button-prev");
+
+        let next = document.createElement("div");
+        next.classList.add("swiper-button-next");
+
+        slider.appendChild(pagination);
+        slider.appendChild(prev);
+        slider.appendChild(next);
+        dom_cards_container.appendChild(slider);
+
+
+        swiperCards = new Swiper('.swiperCards', {
+            direction: 'horizontal',
+            effect: 'slide',
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            centeredSlides: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return number;
+
+                },
+                formatFractionTotal: function (number) {
+                    return number;
+                }
+            },
+
+            breakpoints: {
+                780: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+
+                1050: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                }
+            },
+
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+
+        swiperPicksMenu = new Swiper('.swiperPicksMenu', {
+            direction: 'horizontal',
+            effect: 'slide',
+            slidesPerView: 1,
+            spaceBetween: 0,
+            centeredSlides: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return number;
+
+                },
+                formatFractionTotal: function (number) {
+                    return number;
+                }
+            },
+
+            breakpoints: {
+                780: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+
+                1050: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                }
+            },
+
+
+            navigation: {
+                nextEl: '.swiperPicksMenu-swiper-button-next',
+                prevEl: '.swiperPicksMenu-swiper-button-prev',
+            }
+        });
+
+        swiperPicks = new Swiper('.swiperPicks', {
+            direction: 'horizontal',
+            effect: 'slide',
+            slidesPerView: 1,
+            spaceBetween: 0,
+            centeredSlides: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return number;
+
+                },
+                formatFractionTotal: function (number) {
+                    return number;
+                }
+            },
+
+            breakpoints: {
+                780: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+
+                1050: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                }
+            },
+
+
+            navigation: {
+                nextEl: '.swiperPicks-swiper-button-next',
+                prevEl: '.swiperPicks-swiper-button-prev',
+            }
+        });
+    }
 })
 
 var page = "home";
@@ -52,7 +206,7 @@ var bg_colors = [
     ["#06D6A0", "#000"],
     ["#81171B", "#fff"],
     ["#AD2E24", "#fff"],
-    ["#4361EE", "#fff"], 
+    ["#4361EE", "#fff"],
     ["#102EB1", "#fff"]
 ];
 
@@ -112,7 +266,7 @@ var dom_menu_mobile = document.querySelector(".menu-mobile-page");
 var dom_hamburger1 = document.querySelector(".hamburger1");
 var dom_hamburger2 = document.querySelector(".hamburger2");
 
-var bg_anim; 
+var bg_anim;
 
 dom_hamburger.addEventListener('click', () => {
     dom_menu_mobile.classList.toggle("menu-open");
@@ -180,10 +334,10 @@ window.addEventListener('hashchange', function (pageName) {
 function change_page(page) {
     if (active_page) {
         console.log('DISATTIVO ' + active_page);
-        pages[active_page].dispose().then(function(){
+        pages[active_page].dispose().then(function () {
             active_page = page;
             console.log('ATTIVO ' + page);
-            pages[page].init();        
+            pages[page].init();
         });
     } else {
         active_page = page;
@@ -217,7 +371,7 @@ function check_txt_color(txtcolor) {
     dom_body.classList.remove("whitetxt");
     dom_body.classList.remove("blacktxt");
 
-    if(txtcolor == '#000'){
+    if (txtcolor == '#000') {
         dom_body.classList.add("blacktxt");
     } else {
         dom_body.classList.add("whitetxt");
@@ -266,7 +420,7 @@ function init_background(colorSet) {
 
 
 function page_exit(page) {
-    if(page.animation?.playState == 'running'){
+    if (page.animation?.playState == 'running') {
         page.animation.cancel();
     }
     page.animation = page.animate([
@@ -294,7 +448,7 @@ function page_exit(page) {
 }
 
 function page_enter(page) {
-    if(page.animation?.playState == 'running'){
+    if (page.animation?.playState == 'running') {
         page.animation.cancel();
     }
     page.style.display = "block";
@@ -314,6 +468,7 @@ function page_enter(page) {
     );
 
     page.animation.onfinish = () => {
+        page.style.display = "block";
         page.style.opacity = "1";
     }
     return page.animation;

@@ -152,7 +152,7 @@ function edit_card(obj) {
         dom_picks_container.style.opacity = "0";
         dom_picks_menu.style.display = "block";
         dom_picks_menu.style.opacity = "1";
-        dom_picks_title.textContent = "Select any card you want from the deck";
+        dom_picks_title.textContent = "Select any card from the deck";
         let alt_bg_anim = animate_bg_alternate(custom_picks_menu_colors[0], custom_picks_menu_colors[1]);
 
         alt_bg_anim.onfinish = () => {
@@ -367,88 +367,7 @@ function create_slider(node, className) {
 }
 
 function page_custom_picks_init() {
-    if (ismobile()) {
-        create_slider(dom_picks_container, "swiperPicks");
-        create_slider(dom_picks_cards_wrapper, "swiperPicksMenu");
-
-        swiperPicksMenu = new Swiper('.swiperPicksMenu', {
-            direction: 'horizontal',
-            effect: 'slide',
-            slidesPerView: 1,
-            spaceBetween: 0,
-            centeredSlides: true,
-
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                type: 'fraction',
-                formatFractionCurrent: function (number) {
-                    return number;
-
-                },
-                formatFractionTotal: function (number) {
-                    return number;
-                }
-            },
-
-            breakpoints: {
-                780: {
-                    slidesPerView: 2,
-                    spaceBetween: 20
-                },
-
-                1050: {
-                    slidesPerView: 1,
-                    spaceBetween: 0
-                }
-            },
-
-
-            navigation: {
-                nextEl: '.swiperPicksMenu-swiper-button-next',
-                prevEl: '.swiperPicksMenu-swiper-button-prev',
-            }
-        });
-
-        swiperPicks = new Swiper('.swiperPicks', {
-            direction: 'horizontal',
-            effect: 'slide',
-            slidesPerView: 1,
-            spaceBetween: 0,
-            centeredSlides: true,
-
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                type: 'fraction',
-                formatFractionCurrent: function (number) {
-                    return number;
-
-                },
-                formatFractionTotal: function (number) {
-                    return number;
-                }
-            },
-
-            breakpoints: {
-                780: {
-                    slidesPerView: 2,
-                    spaceBetween: 20
-                },
-
-                1050: {
-                    slidesPerView: 1,
-                    spaceBetween: 0
-                }
-            },
-
-
-            navigation: {
-                nextEl: '.swiperPicks-swiper-button-next',
-                prevEl: '.swiperPicks-swiper-button-prev',
-            }
-        });
-    }
+    
     clearInterval(standard_int);
     dom_body.classList.add("point");
     let alt_bg_anim = background_transition(cards_main_colors[0], cards_main_colors[1]);
@@ -483,7 +402,7 @@ function page_custom_picks_dispose() {
             dom_picks_container.style.opacity = "1";
 
             if(ismobile()){
-                dom_picks_container.removeChild(dom_picks_container.children[0]);
+                /* dom_picks_container.removeChild(dom_picks_container.children[0]); */
                 swiperPicksMenu.slideTo(0, 1, false);
                 swiperPicks.slideTo(0, 1, false);
                 

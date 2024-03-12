@@ -273,76 +273,7 @@ function levels_type(dom_card, random_card, type) {
 function page_cards_main_init() {
     return new Promise((resolve, reject) => {
         if (ismobile()) {
-            let swiperWrapper = document.createElement("div");
-            swiperWrapper.classList.add("swiper-wrapper");
-
-            let slider = document.createElement("div");
-            slider.classList.add("swiperCards", "swiper");
-
-            let domElem = document.querySelectorAll(".cards-container > .card-wrapper");
-
-            for (let i = 0; i < domElem.length; i++) {
-                let slide = document.createElement("div");
-                slide.classList.add("swiper-slide");
-                slide.appendChild(domElem[i]);
-                swiperWrapper.appendChild(slide);
-            }
-
-            slider.appendChild(swiperWrapper);
-
-            let pagination = document.createElement("div");
-            pagination.classList.add("swiper-pagination");
-
-            let prev = document.createElement("div");
-            prev.classList.add("swiper-button-prev");
-
-            let next = document.createElement("div");
-            next.classList.add("swiper-button-next");
-
-            slider.appendChild(pagination);
-            slider.appendChild(prev);
-            slider.appendChild(next);
-            dom_cards_container.appendChild(slider);
-
-
-            swiperCards = new Swiper('.swiperCards', {
-                direction: 'horizontal',
-                effect: 'slide',
-                slidesPerView: 'auto',
-                spaceBetween: 0,
-                centeredSlides: true,
-    
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                    type: 'fraction',
-                    formatFractionCurrent: function (number) {
-                        return number;
-    
-                    },
-                    formatFractionTotal: function (number) {
-                        return number;
-                    }
-                },
-    
-                breakpoints: {
-                    780: {
-                        slidesPerView: 2,
-                        spaceBetween: 20
-                    },
-    
-                    1050: {
-                        slidesPerView: 1,
-                        spaceBetween: 0
-                    }
-                },
-    
-                
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                }
-            });
+            
         }
 
         if (window.location.hash == "#random") {
@@ -437,7 +368,7 @@ function page_cards_main_dispose() {
                             }
 
                             if(ismobile()){
-                                dom_cards_container.removeChild(dom_cards_container.children[0]);
+                                /* dom_cards_container.removeChild(dom_cards_container.children[0]); */
                             }
 
                             resolve();
@@ -450,7 +381,7 @@ function page_cards_main_dispose() {
                     random_mode = false;
 
                     if(ismobile()){
-                        dom_cards_container.removeChild(dom_cards_container.children[0]);
+                        /* dom_cards_container.removeChild(dom_cards_container.children[0]); */
                     }
                 }
                 resolve();
