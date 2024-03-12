@@ -858,7 +858,7 @@ header {
     }
 }
 
-@media screen and (max-height: 780px){
+@media screen and (max-height: 800px){
     .cards_main .cards-container{
         /* margin-top: 4.25rem; */
         position: unset;
