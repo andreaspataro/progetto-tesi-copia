@@ -869,7 +869,7 @@ header {
 
     .custom_picks .picks-menu-container{
         /* margin-top: 4.25rem; */
-        position: unset;
+        position: relative;
         top: unset;
         left: unset;
         transform: unset;
