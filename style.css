@@ -795,6 +795,8 @@ header {
     body.menu-mobile-open .header-logo{
         color: #fff;
     }
+
+    
 }
 
 @media screen and (max-width: 580px){
@@ -835,4 +837,68 @@ header {
         font-size: 2.3rem;
         line-height: 2.3rem;
     }
+
+    .swiper-button-next{
+        right: var(--swiper-navigation-sides-offset, 2px);   
+    }
+
+    .swiper-button-prev{
+        left: var(--swiper-navigation-sides-offset, 2px);
+    }
+}
+
+@media screen and (max-height: 750px){
+    .cards_main .cards-container{
+        /* margin-top: 4.25rem; */
+        position: unset;
+        top: unset;
+        left: unset;
+        transform: unset;
+        margin-top: unset;
+    }
+
+    .cards_main.pages{
+        padding: 0;
+    }
+
+    .cards_main_title {
+        /* font-size: 1.3rem; */
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .custom_picks .picks-menu-container{
+        /* margin-top: 4.25rem; */
+        position: unset;
+        top: unset;
+        left: unset;
+        transform: unset;
+        margin-top: unset;
+    }
+
+    .custom_picks.pages{
+        padding: 0;
+    }
+
+    .custom_picks .picks-container{
+        /* margin-top: 4.25rem; */
+        position: unset;
+        top: unset;
+        left: unset;
+        transform: unset;
+        margin-top: unset;
+    }
+
+    .custom_picks_title{
+        /* font-size: 1.3rem; */
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .custom_picks_title{
+        /* font-size: 1.3rem; */
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
 }
