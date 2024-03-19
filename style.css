@@ -160,6 +160,7 @@ header {
 }
 
 
+
 .card {
     cursor: pointer;
     background: linear-gradient(to top, #131519, #0a0908);
@@ -446,6 +447,20 @@ header {
 
 @media screen and (max-width: 1050px){
 
+    .cards_main .card-wrapper{
+        padding: unset;
+        padding-top: 1.25rem;
+    }
+
+    .cards_main .card-outer-wrapper{
+        perspective: 1400px;    
+    }
+
+    .help .centered-text{
+        padding: unset;
+        margin: 1em 0;
+    }    
+
     .cards_main_title{
         font-size: 1.6rem;
     }
@@ -647,6 +662,32 @@ header {
 
 @media screen and (max-width: 700px){
 
+    .help .centered-text::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .help .centered-text::-webkit-scrollbar-track {
+        border-radius: 4px;
+        transition: all 0.5s;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+    
+    .help .centered-text::-webkit-scrollbar-track:hover {
+        -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    .help .centered-text::-webkit-scrollbar-thumb {
+        background: #7F7F7F;
+        border-radius: 4px;
+        transition: all 0.5s;
+    }
+    
+    .help .centered-text::-webkit-scrollbar-thumb:hover {
+        background: #525252;
+    }
+
     .cards_main_title{
         text-align: center;
     }
@@ -801,7 +842,7 @@ header {
 
 @media screen and (max-width: 580px){
     .cards_main_title{
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 
     .custom_picks_title{
@@ -809,7 +850,7 @@ header {
     }
 
     .cards_main .lvls-title{
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .home .home-centered{
@@ -874,8 +915,13 @@ header {
 
     .cards_main_title {
         /* font-size: 1.3rem; */
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .cards_main .lvls-title{
+        font-size: 1.4rem;
+        width: calc(100% - 2rem);
     }
 
     .custom_picks .picks-menu-container{
@@ -902,14 +948,8 @@ header {
 
     .custom_picks_title{
         /* font-size: 1.3rem; */
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-
-    .custom_picks_title{
-        /* font-size: 1.3rem; */
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     
 }

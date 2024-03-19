@@ -58,7 +58,7 @@ function dispose_choices() {
 
 function show_choiches() {
     if (choices.length > 0) {
-        dom_picks_title.textContent = "These are the cards that you have chosen";
+        dom_picks_title.textContent = "These are the cards you selected";
         for (let i = 0; i < choices.length; i++) {
             if(ismobile()){
                 create_card(choices[i], choices[i].type, swiperPicks, true, false, true);    
