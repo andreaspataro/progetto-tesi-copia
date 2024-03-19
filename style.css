@@ -943,7 +943,7 @@ header {
         top: unset;
         left: unset;
         transform: unset;
-        margin-top: unset;
+        /* margin-top: unset; */
     }
 
     .custom_picks_title{
