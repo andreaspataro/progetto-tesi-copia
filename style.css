@@ -900,6 +900,10 @@ header {
 }
 
 @media screen and (max-height: 800px){
+    body {
+        overflow: unset;
+    }
+    
     .cards_main .cards-container{
         /* margin-top: 4.25rem; */
         position: unset;
