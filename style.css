@@ -949,8 +949,8 @@ header {
 
     .cards_main_title {
         /* font-size: 1.3rem; */
-        padding-left: 2.5em;
-        padding-right: 2.5em;
+        padding-left: 1.333em;
+        /* padding-right: 1.333em; */
     }
 
     .cards_main .lvls-title{
