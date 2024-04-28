@@ -900,40 +900,6 @@ header {
 }
 
 @media screen and (max-height: 800px){
-    body {
-        overflow: unset;
-    }
-
-    body::-webkit-scrollbar {
-        width: 8px;
-    }
-    
-    body::-webkit-scrollbar-track {
-        border-radius: 6px;
-        transition: all 0.5s;
-        box-shadow: none;
-        -webkit-box-shadow: none;
-    }
-    
-    body::-webkit-scrollbar-track:hover {
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    }
-    
-    body::-webkit-scrollbar-thumb {
-        background: #7F7F7F;
-        border-radius: 6px;
-        transition: all 0.5s;
-    }
-    
-    body::-webkit-scrollbar-thumb:hover {
-        background: #525252;
-    }
-
-    .cards_main.pages, .custom_picks.pages{
-        background: rgb(152, 153, 166);
-    }
-
     .cards_main .cards-container{
         /* margin-top: 4.25rem; */
         position: unset;
@@ -949,14 +915,14 @@ header {
 
     .cards_main_title {
         /* font-size: 1.3rem; */
-        padding-left: 1.333em;
-        /* padding-right: 1.333em; */
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
-    .cards_main .lvls-title{
+    /* .cards_main .lvls-title{
+        font-size: 1.4rem;
         width: calc(100% - 2rem);
-    }
-    
+    } */
 
     .custom_picks .picks-menu-container{
         /* margin-top: 4.25rem; */
@@ -982,14 +948,28 @@ header {
 
     .custom_picks_title{
         /* font-size: 1.3rem; */
-        padding-left: 1.333em;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     
+}
+
+@media screen and (min-width: 1024px) and (max-height: 800px){
+    .cards_main.pages, .custom_picks.pages{
+        background: rgb(152, 153, 166);
+    }
 }
 
 @media screen and (max-width: 580px) and (max-height: 800px){
     .cards_main .lvls-title{
         font-size: 1.4rem;
         width: calc(100% - 2rem);
+    }
+
+    .cards_main_title {
+        /* font-size: 1.3rem; */
+        padding-left: 1.333em;
+        padding-right: unset;
+        /* padding-right: 1.333em; */
     }
 }
