@@ -160,8 +160,10 @@ function edit_card(obj) {
             dom_containerbg.style.color = custom_picks_menu_colors[1];
         }
         page_enter(dom_custom_picks_page);
+        dom_picks_cards_wrapper.scrollTo(0, 0);
     }
 
+    dom_picks_cards_wrapper.scrollTo(0, 0);
     /* dom_picks_container.style.display = "none";
     dom_picks_container.style.opacity = "0"; */
 
@@ -259,7 +261,6 @@ function change_add_card(card) {
         dispose_select_picks();
         reset_select();
         page_enter(dom_custom_picks_page);
-        dom_picks_cards_wrapper.scrollTo(0, 0);
     }
 
     /* dom_picks_menu.style.display = "none";
