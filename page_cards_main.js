@@ -26,6 +26,7 @@ for (let j = 0; j < dom_card.length; j++) {
 
 
 function cards_engine(clickedCard) {
+    dom_body.classList.add("point");
     if (!stopclick) {
         /* dom_cards_container.style.display = "none"; */
         /* array di scelte */
@@ -53,6 +54,7 @@ function cards_engine(clickedCard) {
                 }
                 /* elimino le inclusioni di font se ci sono */
                 dom_cards_main_wrapper.style.display = "none";
+                dom_body.classList.remove("point");
                 delete_inclusions();
                 let title_anim_in = page_enter(dom_lvls_title);
                 title_anim_in.onfinish = () => {
@@ -73,6 +75,7 @@ function cards_engine(clickedCard) {
                 }
             }
         } else {
+            dom_body.classList.remove("point");
             stopclick = true;
             end_levels = true;
             if (ismobile()) {
