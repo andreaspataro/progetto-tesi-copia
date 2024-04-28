@@ -203,10 +203,10 @@ function show_select_picks() {
     }
     let value = dom_picks_select.value;
     dom_select_text.textContent = value[0].toUpperCase() + value.slice(1);
-    document.querySelector(".picks-menu-cards-wrapper").scrollTo(0, 0);
 }
 
 function dispose_select_picks() {
+    dom_picks_cards_wrapper.scrollTo(0, 0);
     if(ismobile()) {
         let picks_menu_swiper = document.querySelector(".swiperPicksMenu > .swiper-wrapper");
         console.log(picks_menu_swiper.children);
