@@ -201,9 +201,9 @@ function show_select_picks() {
             }
         }
     }
-    document.querySelector(".picks-menu-cards-wrapper").scrollTo(0, 0);
     let value = dom_picks_select.value;
     dom_select_text.textContent = value[0].toUpperCase() + value.slice(1);
+    document.querySelector(".picks-menu-cards-wrapper").scrollTo(0, 0);
 }
 
 function dispose_select_picks() {
