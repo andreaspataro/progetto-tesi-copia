@@ -219,6 +219,7 @@ function random_engine() {
 
 
         innerwrap.addEventListener('click', card_event_listener = (event) => {
+            dom_body.classList.add("point");
             innerwrap.classList.add("card-flip");
             let time = setTimeout(() => {
                 cards_engine(dom_card[i])
