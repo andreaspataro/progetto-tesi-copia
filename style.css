@@ -900,10 +900,6 @@ header {
 }
 
 @media screen and (max-height: 800px){
-    body {
-        overflow: unset;
-    }
-
     .cards_main .cards-container{
         /* margin-top: 4.25rem; */
         position: unset;
@@ -968,6 +964,10 @@ header {
         padding-left: 1.333em;
         padding-right: unset;
         /* padding-right: 1.333em; */
+    }
+    
+    body {
+        overflow: unset;
     }
 }
 
