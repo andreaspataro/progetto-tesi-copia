@@ -36,7 +36,8 @@ dom_picks_menu_close.addEventListener("click", function () {
         }
         dispose_choices();
         show_choiches();
-        dispose_select_picks();
+        /* dispose_select_picks(); */
+        dom_picks_cards_wrapper.scrollTo(0, 0);
         reset_select();
         page_enter(dom_custom_picks_page);
     }
@@ -178,7 +179,6 @@ function edit_card(obj) {
 
     selected_card = obj;
 
-    dom_picks_cards_wrapper.scrollTo(0, 0);
     show_select_picks();
 
 
@@ -224,7 +224,6 @@ function dispose_select_picks() {
 }
 
 function reset_select() {
-    dom_picks_cards_wrapper.scrollTo(0, 0);
     dom_picks_select.selectedIndex = 0;
     if(ismobile()){
         swiperPicksMenu.slideTo(0, 1, false);
@@ -256,7 +255,6 @@ function change_add_card(card) {
         dom_picks_container.style.opacity = "1";
         dom_picks_menu.style.display = "none";
         dom_picks_menu.style.opacity = "0";
-        dom_picks_cards_wrapper.scrollTo(0, 0);
         dispose_choices();
         show_choiches();
         dispose_select_picks();
