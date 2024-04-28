@@ -36,8 +36,7 @@ dom_picks_menu_close.addEventListener("click", function () {
         }
         dispose_choices();
         show_choiches();
-        /* dispose_select_picks(); */
-        dom_picks_cards_wrapper.scrollTo(0, 0);
+        dispose_select_picks();
         reset_select();
         page_enter(dom_custom_picks_page);
     }
@@ -260,6 +259,7 @@ function change_add_card(card) {
         dispose_select_picks();
         reset_select();
         page_enter(dom_custom_picks_page);
+        dom_picks_cards_wrapper.scrollTo(0, 0);
     }
 
     /* dom_picks_menu.style.display = "none";
