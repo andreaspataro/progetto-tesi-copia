@@ -143,7 +143,7 @@ function delete_card(obj) {
 }
 
 function edit_card(obj) {
-    console.log(obj);
+    console.log(obj.childNodes[0].getAttribute("data-type"));
     let page_anim_out = page_exit(dom_custom_picks_page);
     page_anim_out.onfinish = () => {
         dom_custom_picks_page.style.display = "none";
@@ -163,7 +163,6 @@ function edit_card(obj) {
         dom_picks_cards_wrapper.scrollTo(0, 0);
 
     }
-
     dom_picks_cards_wrapper.scrollTo(0, 0);
     /* dom_picks_container.style.display = "none";
     dom_picks_container.style.opacity = "0"; */
@@ -180,6 +179,10 @@ function edit_card(obj) {
     }
 
     selected_card = obj;
+
+    if(obj != null){
+        dom_picks_select.value = obj.childNodes[0].getAttribute("data-type");
+    }
 
     show_select_picks();
 
