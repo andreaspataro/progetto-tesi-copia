@@ -143,7 +143,7 @@ function delete_card(obj) {
 }
 
 function edit_card(obj) {
-    console.log(obj);
+    console.log(obj.children[0]);
     let page_anim_out = page_exit(dom_custom_picks_page);
     page_anim_out.onfinish = () => {
         dom_custom_picks_page.style.display = "none";
@@ -161,6 +161,7 @@ function edit_card(obj) {
         }
         page_enter(dom_custom_picks_page);
         dom_picks_cards_wrapper.scrollTo(0, 0);
+
     }
 
     dom_picks_cards_wrapper.scrollTo(0, 0);
