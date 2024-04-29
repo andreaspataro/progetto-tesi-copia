@@ -18,7 +18,7 @@ var selected_card;
 
 
 dom_picks_menu_close.addEventListener("click", function () {
-
+    dom_body.classList.add("point");
     let page_anim_out = page_exit(dom_custom_picks_page);
     page_anim_out.onfinish = () => {
         dom_custom_picks_page.style.display = "none";
@@ -38,6 +38,7 @@ dom_picks_menu_close.addEventListener("click", function () {
         show_choiches();
         dispose_select_picks();
         reset_select();
+        dom_body.classList.remove("point");
         page_enter(dom_custom_picks_page);
     }
 })
@@ -113,6 +114,7 @@ function check_add_cards() {
 }
 
 function delete_card(obj) {
+    dom_body.classList.add("point");
     let currentCard = obj.children[0];
     let currentCardId = currentCard.getAttribute("data-id");
     let currentCardType = currentCard.getAttribute("data-type");
@@ -134,6 +136,7 @@ function delete_card(obj) {
                 }
             } 
             choices.splice(index, 1);
+            dom_body.classList.remove("point");
             show_choiches();
         }
 
@@ -143,6 +146,7 @@ function delete_card(obj) {
 }
 
 function edit_card(obj) {
+    dom_body.classList.add("point");
     let page_anim_out = page_exit(dom_custom_picks_page);
     page_anim_out.onfinish = () => {
         dom_custom_picks_page.style.display = "none";
@@ -158,6 +162,7 @@ function edit_card(obj) {
             dom_containerbg.style.background = custom_picks_menu_colors[0];
             dom_containerbg.style.color = custom_picks_menu_colors[1];
         }
+        dom_body.classList.remove("point");
         page_enter(dom_custom_picks_page);
         dom_picks_cards_wrapper.scrollTo(0, 0);
 
@@ -197,10 +202,13 @@ function show_select_picks() {
     for (let element of elements_unique) {
         if (element.type == dom_picks_select.value) {
             for (let card of element.set) {
-                if(ismobile()){
-                    create_card(card, element.type, swiperPicksMenu, false, true, true);    
-                } else {
-                    create_card(card, element.type, dom_picks_cards_wrapper, false, true, false);
+                var found = choices.find((elem) => elem.id == card.id && elem.type == card.type);
+                if (!found) {
+                    if(ismobile()){
+                        create_card(card, element.type, swiperPicksMenu, false, true, true);    
+                    } else {
+                        create_card(card, element.type, dom_picks_cards_wrapper, false, true, false);
+                    }
                 }
             }
         }
@@ -251,6 +259,7 @@ function change_add_card(card) {
     }
     get_content(card_type, index, card, choices);
 
+    dom_body.classList.add("point");
     let page_anim_out = page_exit(dom_custom_picks_page);
     page_anim_out.onfinish = () => {
         dom_custom_picks_page.style.display = "none";
@@ -263,6 +272,7 @@ function change_add_card(card) {
         show_choiches();
         dispose_select_picks();
         reset_select();
+        dom_body.classList.remove("point");
         page_enter(dom_custom_picks_page);
     }
 
